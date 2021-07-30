@@ -90,7 +90,7 @@ export default {
       }
 
       this.datacollection = {
-        labels: ["1 étoile", "2 étoiles", "3 étoiles", "4 étoiles", "5 étoiles"],
+        labels: ["1 stella", "2 stelle", "3 stelle", "4 stelle", "5 stelle"],
         datasets: [{
           data: rates,
           backgroundColor: [
