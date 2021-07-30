@@ -13,7 +13,7 @@
                       <v-icon large>person</v-icon>
                     </v-list-tile-avatar>
                     <v-list-tile-content>
-                      <v-list-tile-title>Interlocuteur</v-list-tile-title>
+                      <v-list-tile-title>Interlocutore</v-list-tile-title>
                       <v-list-tile-sub-title>{{ call.callHistory.DisplayName }}</v-list-tile-sub-title>
                     </v-list-tile-content>
                   </v-list-tile>
@@ -23,7 +23,7 @@
                       <v-icon large>today</v-icon>
                     </v-list-tile-avatar>
                     <v-list-tile-content>
-                      <v-list-tile-title>Date de début d'appel</v-list-tile-title>
+                      <v-list-tile-title>Inizio chiamata</v-list-tile-title>
                       <v-list-tile-sub-title>{{ startCall }}</v-list-tile-sub-title>
                     </v-list-tile-content>
                   </v-list-tile>
@@ -33,7 +33,7 @@
                       <v-icon large>call_missed_outgoing</v-icon>
                     </v-list-tile-avatar>
                     <v-list-tile-content>
-                      <v-list-tile-title>Origine de l'appel</v-list-tile-title>
+                      <v-list-tile-title>Direttrice chiamata</v-list-tile-title>
                       <v-list-tile-sub-title>{{ call.callHistory.Direction }}</v-list-tile-sub-title>
                     </v-list-tile-content>
                   </v-list-tile>
@@ -43,7 +43,7 @@
                       <v-icon large>personal_video</v-icon>
                     </v-list-tile-avatar>
                     <v-list-tile-content>
-                      <v-list-tile-title>Codec utilisé</v-list-tile-title>
+                      <v-list-tile-title>Codec utilizzato</v-list-tile-title>
                       <v-list-tile-sub-title>{{ call.codec.systemName }}</v-list-tile-sub-title>
                     </v-list-tile-content>
                   </v-list-tile>
@@ -53,7 +53,7 @@
                       <v-icon large>face</v-icon>
                     </v-list-tile-avatar>
                     <v-list-tile-content>
-                      <v-list-tile-title>Personne(s) présente(s) dans la salle</v-list-tile-title>
+                      <v-list-tile-title>Presenti in sala</v-list-tile-title>
                       <v-list-tile-sub-title>{{ call.callHistory.RoomAnalytics.PeopleCount }}</v-list-tile-sub-title>
                     </v-list-tile-content>
                   </v-list-tile>
@@ -69,7 +69,7 @@
                           <v-icon v-for="i in call.rate" :key="i.id">grade</v-icon>
                         </template>
                         <template v-else>
-                            Aucune note
+                            Nessuna nota
                         </template>
                       </v-list-tile-sub-title>
                     </v-list-tile-content>
@@ -93,7 +93,7 @@
                       <v-icon large>event</v-icon>
                     </v-list-tile-avatar>
                     <v-list-tile-content>
-                      <v-list-tile-title>Date de fin d'appel</v-list-tile-title>
+                      <v-list-tile-title>Fine chiamata</v-list-tile-title>
                       <v-list-tile-sub-title>{{ endCall }}</v-list-tile-sub-title>
                     </v-list-tile-content>
                   </v-list-tile>
@@ -103,7 +103,7 @@
                       <v-icon large>dialer_sip</v-icon>
                     </v-list-tile-avatar>
                     <v-list-tile-content>
-                      <v-list-tile-title>Type d'appel</v-list-tile-title>
+                      <v-list-tile-title>Tipo Chiamata</v-list-tile-title>
                       <v-list-tile-sub-title>{{ call.callHistory.Protocol }}</v-list-tile-sub-title>
                     </v-list-tile-content>
                   </v-list-tile>
@@ -113,7 +113,7 @@
                       <v-icon large>settings_ethernet</v-icon>
                     </v-list-tile-avatar>
                     <v-list-tile-content>
-                      <v-list-tile-title>Adresse MAC du codec</v-list-tile-title>
+                      <v-list-tile-title>Indirizzo MAC del codec</v-list-tile-title>
                       <v-list-tile-sub-title>{{ call.codec.macAddress }}</v-list-tile-sub-title>
                     </v-list-tile-content>
                   </v-list-tile>
@@ -123,7 +123,7 @@
                       <v-icon large>timer</v-icon>
                     </v-list-tile-avatar>
                     <v-list-tile-content>
-                      <v-list-tile-title>Durée de l'appel</v-list-tile-title>
+                      <v-list-tile-title>Durata</v-list-tile-title>
                       <template v-if="call.callHistory.Duration > 60">
                         <v-list-tile-sub-title>
                           {{ Math.floor(call.callHistory.Duration / 60) }} minute<span v-if="call.callHistory.Duration > 120">s</span>
@@ -142,8 +142,8 @@
                       <v-icon large>comment</v-icon>
                     </v-list-tile-avatar>
                     <v-list-tile-content>
-                      <v-list-tile-title>Commentaires</v-list-tile-title>
-                      <v-list-tile-sub-title>{{ call.feedbacks || "Aucun commentaire" }}</v-list-tile-sub-title>
+                      <v-list-tile-title>Commenti</v-list-tile-title>
+                      <v-list-tile-sub-title>{{ call.feedbacks || "Nessun Commento" }}</v-list-tile-sub-title>
                     </v-list-tile-content>
                   </v-list-tile>
                 </v-list>
@@ -280,7 +280,7 @@
                 </v-tabs>
                 <v-card-actions>
                   <v-spacer></v-spacer>
-                  <v-btn color="grey lighten-3" class="elevation-0" light @click="dialogDiagnostics = true">Run Codec Diagnostics</v-btn>
+                  <v-btn color="grey lighten-3" class="elevation-0" light @click="dialogDiagnostics = true">Esegui Diagnostica</v-btn>
                 </v-card-actions>
               </v-card>
             </v-flex>
@@ -291,10 +291,10 @@
     <v-dialog v-model="dialogComments" width="600px">
       <v-card>
         <v-card-title>
-          <span class="headline"><v-icon large class="mr-2">comment</v-icon>Commentaires</span>
+          <span class="headline"><v-icon large class="mr-2">comment</v-icon>Commenti</span>
         </v-card-title>
         <v-card-text>
-          <p class="justify">{{ call.feedbacks || "Aucun commentaire" }}</p>
+          <p class="justify">{{ call.feedbacks || "Nessun Commento" }}</p>
         </v-card-text>
       </v-card>
     </v-dialog>
