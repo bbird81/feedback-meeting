@@ -54,15 +54,15 @@
                     <v-tabs icons-and-text centered dark color="teal" class="fill-height overflow">
                       <v-tabs-slider color="p"></v-tabs-slider>
                       <v-tab href="#tab-1">
-                        Ajouter
+                        Aggiungi
                         <v-icon>add</v-icon>
                       </v-tab>
                       <v-tab href="#tab-2">
-                        Modifier
+                        Modifica
                         <v-icon>edit</v-icon>
                       </v-tab>
                       <v-tab href="#tab-3">
-                        Supprimer
+                        Elimina
                         <v-icon>delete</v-icon>
                       </v-tab>
                       <v-tab-item id="tab-1">
@@ -72,31 +72,31 @@
                               <v-text-field
                                 v-model="modelAdd.systemName"
                                 :rules="stringRules"
-                                label="Nom du codec"
+                                label="Nome del codec"
                                 required
                               ></v-text-field>
                               <v-text-field
                                 v-model="modelAdd.macAddress"
                                 :rules="stringRules"
-                                label="Adresse MAC"
+                                label="Indirizzo MAC"
                                 required
                               ></v-text-field>
                               <v-text-field
                                 v-model="modelAdd.ipAddress"
                                 :rules="stringRules"
-                                label="Adresse IP"
+                                label="Indirizzo IP"
                                 required
                               ></v-text-field>
                               <v-text-field
                                 v-model="modelAdd.productType"
                                 :rules="stringRules"
-                                label="Type du produit"
+                                label="Modello"
                                 required
                               ></v-text-field>
                               <v-text-field
                                 v-model="modelAdd.username"
                                 :rules="stringRules"
-                                label="Username"
+                                label="Nome Utente"
                                 required
                               ></v-text-field>
                               <v-text-field
@@ -108,13 +108,13 @@
                               <v-text-field
                                 v-model="modelAdd.firmware"
                                 :rules="stringRules"
-                                label="Version du firmware"
+                                label="Versione firmware"
                                 required
                               ></v-text-field>
                               <v-text-field
                                 v-model="modelAdd.uri"
                                 :rules="stringRules"
-                                label="URI du codec"
+                                label="URI del codec"
                                 required
                               ></v-text-field>
 
@@ -123,9 +123,9 @@
                                 :disabled="!validAdd"
                                 @click="submit"
                               >
-                                Ajouter
+                                Aggiungi
                               </v-btn>
-                              <v-btn @click="clear">Effacer</v-btn>
+                              <v-btn @click="clear">Cancella</v-btn>
                             </v-form>
                           </v-card-text>
                         </v-card>
