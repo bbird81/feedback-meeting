@@ -24,7 +24,7 @@ export default {
       ],
       config: {
         defaultView: 'month',
-        locale: 'fr',
+        locale: 'it',
         eventLimit: true,
         height: 'parent',
         editable: false,
