@@ -19,6 +19,9 @@ This service is composed of two parts :
 - the first part is an In-Room Control interface, appearing following a call, which allow the user to post a feedback thanks to the TextInput, available in the API
 - the second part is a web interface which display the feedbacks and furthers informations on the call.
 
+### Why a fork?
+I just want to translate it to Italian language :)
+
 ## Build Setup
 
 ### Clone project and install dependencies
