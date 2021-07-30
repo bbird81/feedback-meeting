@@ -4,7 +4,7 @@
       <v-container>
         <v-layout row wrap>
           <v-flex xs12>
-            <h2 class="text-xs-center">Infos du mois de {{ dateFormat }}</h2>
+            <h2 class="text-xs-center">Statistiche del mese di {{ dateFormat }}</h2>
           </v-flex>
           <v-flex md6 sm6 xs12>
             <v-list two-line>
@@ -13,8 +13,8 @@
                   <v-icon class="green white--text">call</v-icon>
                 </v-list-tile-avatar>
                 <v-list-tile-content>
-                  <v-list-tile-title>Nombre d'appels total</v-list-tile-title>
-                  <v-list-tile-sub-title>{{ totalCalls || "Aucune donnée" }}</v-list-tile-sub-title>
+                  <v-list-tile-title>Numero totale di chiamate</v-list-tile-title>
+                  <v-list-tile-sub-title>{{ totalCalls || "Nessun dato" }}</v-list-tile-sub-title>
                 </v-list-tile-content>
               </v-list-tile>
               <v-list-tile>
@@ -22,8 +22,8 @@
                   <v-icon class="blue white--text">personal_video</v-icon>
                 </v-list-tile-avatar>
                 <v-list-tile-content>
-                  <v-list-tile-title>Codec le plus utilisé</v-list-tile-title>
-                  <v-list-tile-sub-title>{{ mostUsedCodec || "Aucune donnée" }}</v-list-tile-sub-title>
+                  <v-list-tile-title>Codec più utilizzati</v-list-tile-title>
+                  <v-list-tile-sub-title>{{ mostUsedCodec || "Nessun dato" }}</v-list-tile-sub-title>
                 </v-list-tile-content>
               </v-list-tile>
               </v-list>
@@ -35,17 +35,17 @@
                   <v-icon class="orange white--text">access_time</v-icon>
                 </v-list-tile-avatar>
                 <v-list-tile-content>
-                  <v-list-tile-title>Durée moyenne d'appel</v-list-tile-title>
+                  <v-list-tile-title>Durata media delle chiamate</v-list-tile-title>
                   <template v-if="averageDuration">
                     <template v-if="averageDuration > 60">
                       <v-list-tile-sub-title>{{ Math.floor(averageDuration / 60) }} minute<span v-if="averageDuration > 120">s</span></v-list-tile-sub-title>
                     </template>
                     <template v-else>
-                      <v-list-tile-sub-title>{{ averageDuration }} seconde<span v-if="averageDuration > 1">s</span></v-list-tile-sub-title>
+                      <v-list-tile-sub-title>{{ averageDuration }} secondi<span v-if="averageDuration > 1">s</span></v-list-tile-sub-title>
                     </template>
                   </template>
                   <template v-else>
-                    <v-list-tile-sub-title>Aucune donnée</v-list-tile-sub-title>
+                    <v-list-tile-sub-title>Nessun dato</v-list-tile-sub-title>
                   </template>
                 </v-list-tile-content>
               </v-list-tile>
@@ -54,13 +54,13 @@
                   <v-icon class="teal white--text">rate_review</v-icon>
                 </v-list-tile-avatar>
                 <v-list-tile-content>
-                  <v-list-tile-title>Note moyenne</v-list-tile-title>
+                  <v-list-tile-title>Voto medio</v-list-tile-title>
                   <v-list-tile-sub-title>
                     <template v-if="averageRate">
                       <v-icon v-for="i in averageRate" :key="i.id">grade</v-icon>
                     </template>
                     <template v-else>
-                      Aucune donnée
+                      Nessun dato
                     </template>
                   </v-list-tile-sub-title>
                 </v-list-tile-content>

@@ -4,7 +4,7 @@
       <v-card-text class="d-flex flex-with-grow">
         <v-flex xs12>
           <v-layout column>
-            <h2 class="text-xs-center">Répartition en % des notes des appels durant le mois de {{ dateFormat }}</h2>
+            <h2 class="text-xs-center">Distribuzione in % delle valutazioni delle chiamate nel mese di {{ dateFormat }}</h2>
             <PolarChart :chart-data="datacollection" :options="optionsChart" class="fill-height"></PolarChart>
           </v-layout>
         </v-flex>
