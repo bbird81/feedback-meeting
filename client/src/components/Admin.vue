@@ -4,7 +4,7 @@
       <v-btn icon @click="closeDialog()" dark>
         <v-icon>close</v-icon>
       </v-btn>
-      <v-toolbar-title>Admin</v-toolbar-title>
+      <v-toolbar-title>Amministrazione</v-toolbar-title>
     </v-toolbar>
     <v-card-text class="fill-height">
       <v-container fluid grid-list-lg fill-height>
@@ -16,7 +16,7 @@
                     <v-container fluid>
                       <v-layout row>
                           <v-flex d-flex class="align-items-center">
-                              <h1>Etat des codecs</h1>
+                              <h1>Stato delle videoconferenze</h1>
                           </v-flex>
                           <v-flex text-xs-right>
                               <v-btn fab color="success" @click="refreshCodecs">
@@ -37,7 +37,7 @@
                                           {{ codec.messageError }}
                                         </v-alert>
                                         <v-alert :value="true" type="success" v-if="!codec.error">
-                                          Codec enregistré
+                                          Codec registrato
                                         </v-alert>
                                     </v-card-text>
                                 </v-card>
@@ -153,31 +153,31 @@
                                   <v-text-field
                                     v-model="modelEdit.systemName"
                                     :rules="stringRules"
-                                    label="Nom du codec"
+                                    label="Nome del codec"
                                     required
                                   ></v-text-field>
                                   <v-text-field
                                     v-model="modelEdit.macAddress"
                                     :rules="stringRules"
-                                    label="Adresse MAC"
+                                    label="Indirizzo MAC"
                                     required
                                   ></v-text-field>
                                   <v-text-field
                                     v-model="modelEdit.ipAddress"
                                     :rules="stringRules"
-                                    label="Adresse IP"
+                                    label="Indirizzo IP"
                                     required
                                   ></v-text-field>
                                   <v-text-field
                                     v-model="modelEdit.productType"
                                     :rules="stringRules"
-                                    label="Type du produit"
+                                    label="Modello"
                                     required
                                   ></v-text-field>
                                   <v-text-field
                                     v-model="modelEdit.username"
                                     :rules="stringRules"
-                                    label="Username"
+                                    label="Nome Utente"
                                     required
                                   ></v-text-field>
                                   <v-text-field
@@ -189,13 +189,13 @@
                                   <v-text-field
                                     v-model="modelEdit.firmware"
                                     :rules="stringRules"
-                                    label="Version du firmware"
+                                    label="Versione firmware"
                                     required
                                   ></v-text-field>
                                   <v-text-field
                                     v-model="modelEdit.uri"
                                     :rules="stringRules"
-                                    label="URI du codec"
+                                    label="URI del codec"
                                     required
                                   ></v-text-field>
 
@@ -204,7 +204,7 @@
                                     :disabled="!validEdit"
                                     @click="submitEdit"
                                   >
-                                    Modifier
+                                    Modifica
                                   </v-btn>
                                 </v-card-text>
                               </v-card>
@@ -221,7 +221,7 @@
                                 :items="codecs"
                                 v-model="select"
                                 :hint="`${select.systemName}, ${select.ipAddress}`"
-                                label="Sélectionnez un codec"
+                                label="Seleziona un codec"
                                 single-line
                                 item-text="systemName"
                                 item-value="_id"
@@ -233,7 +233,7 @@
                                 color="error"
                                 @click="submitDelete"
                               >
-                                Supprimer
+                                Elimina
                               </v-btn>
                             </v-form>
                           </v-card-text>
