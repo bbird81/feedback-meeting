@@ -7,14 +7,14 @@
             <v-list two-line>
               <v-list-tile>
                 <v-list-tile-content>
-                  <v-list-tile-title>Nom</v-list-tile-title>
+                  <v-list-tile-title>Nome dispositivo</v-list-tile-title>
                   <v-list-tile-sub-title>{{ codec.systemName }}</v-list-tile-sub-title>
                 </v-list-tile-content>
               </v-list-tile>
               <v-divider></v-divider>
               <v-list-tile>
                 <v-list-tile-content>
-                  <v-list-tile-title>Type</v-list-tile-title>
+                  <v-list-tile-title>Modello</v-list-tile-title>
                   <v-list-tile-sub-title>{{ codec.productType }}</v-list-tile-sub-title>
                 </v-list-tile-content>
               </v-list-tile>
@@ -31,14 +31,14 @@
             <v-list two-line>
               <v-list-tile>
                 <v-list-tile-content>
-                  <v-list-tile-title>Adresse IP</v-list-tile-title>
+                  <v-list-tile-title>Indirizzo IP</v-list-tile-title>
                   <v-list-tile-sub-title>{{ codec.ipAddress}}</v-list-tile-sub-title>
                 </v-list-tile-content>
               </v-list-tile>
               <v-divider></v-divider>
               <v-list-tile>
                 <v-list-tile-content>
-                  <v-list-tile-title>Adresse MAC</v-list-tile-title>
+                  <v-list-tile-title>Indirizzo MAC</v-list-tile-title>
                   <v-list-tile-sub-title>{{ codec.macAddress}}</v-list-tile-sub-title>
                 </v-list-tile-content>
               </v-list-tile>
@@ -56,7 +56,7 @@
       <v-flex xs12 text-xs-center>
         <v-card flat>
           <v-card-text>
-            <a :href="urlCodec" target="_blank" class="subheading">Accéder à l'interface du {{ codec.systemName }}</a>
+            <a :href="urlCodec" target="_blank" class="subheading">Accedi all'interfaccia di {{ codec.systemName }}</a>
           </v-card-text>
         </v-card>
       </v-flex>
@@ -65,7 +65,7 @@
           <v-card-text>
             <v-layout row mb-3 align-center>
               <v-flex>
-                <h1 class="headline pl-2">Diagnostics</h1>
+                <h1 class="headline pl-2">Diagnostica</h1>
               </v-flex>
               <v-flex text-xs-right>
                 <v-btn fab color="success" class="flex-without-grow" @click="getDiagnostics">
