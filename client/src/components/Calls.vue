@@ -4,7 +4,7 @@
       <v-btn icon @click="closeDialog()" dark>
         <v-icon>close</v-icon>
       </v-btn>
-      <v-toolbar-title>Appels</v-toolbar-title>
+      <v-toolbar-title>Chiamate</v-toolbar-title>
     </v-toolbar>
     <v-card-text class="fill-height">
       <v-card class="fill-height">
@@ -14,7 +14,7 @@
           <v-spacer></v-spacer>
           <v-text-field
             append-icon="search"
-            label="Rechercher"
+            label="Ricerca"
             single-line
             v-model="search"
           ></v-text-field>
@@ -44,7 +44,7 @@
             </td>
           </template>
           <v-alert slot="no-results" :value="true" color="error" icon="warning">
-            Votre recherche pour "{{ search }}" n'a donné aucun résultat.
+            La ricerca per "{{ search }}" non ha prodotto alcun risultato.
           </v-alert>
         </v-data-table>
       </v-card>
@@ -66,17 +66,17 @@ export default {
       dialogDiagnostics: false,
       codecSelected: null,
       headers: [
-        { text: 'Dialed URI', value: 'callHistory.RemoteNumber', align: 'center' },
-        { text: 'Codec utilisé', value: 'codec.systemName', align: 'center' },
-        { text: 'Adresse IP & MAC', value: 'codec.ipAddress', align: 'center' },
-        { text: 'Date d\'appel', value: 'callHistory.StartTime', align: 'center' },
-        { text: 'Durée (min.)', value: 'callHistory.Duration', align: 'center' },
-        { text: 'Type d\'appel', value: 'callHistory.Direction', align: 'center' },
-        { text: 'Protocol', value: 'callHistory.Protocol', align: 'center' },
-        { text: 'People Presence', value: 'callHistory.RoomAnalytics.PeopleCount', align: 'center' },
-        { text: 'Note de l\'appel', value: 'rate', align: 'center' },
-        { text: 'Commentaires', value: 'feedbacks', align: 'center' },
-        { text: 'Diagnostics', value: 'diagnostics', align: 'center' }
+        { text: 'URI Chiamata', value: 'callHistory.RemoteNumber', align: 'center' },
+        { text: 'Codec utilizzato', value: 'codec.systemName', align: 'center' },
+        { text: 'Indirizzo IP & MAC', value: 'codec.ipAddress', align: 'center' },
+        { text: 'Data/ora chiamata', value: 'callHistory.StartTime', align: 'center' },
+        { text: 'Durata (min.)', value: 'callHistory.Duration', align: 'center' },
+        { text: 'Direzione chiamata', value: 'callHistory.Direction', align: 'center' },
+        { text: 'Protocollo', value: 'callHistory.Protocol', align: 'center' },
+        { text: 'Persone Presenti', value: 'callHistory.RoomAnalytics.PeopleCount', align: 'center' },
+        { text: 'Note di chiamata', value: 'rate', align: 'center' },
+        { text: 'Commenti', value: 'feedbacks', align: 'center' },
+        { text: 'Diagnostica', value: 'diagnostics', align: 'center' }
       ],
       optionsRows: [10, 25]
     }
