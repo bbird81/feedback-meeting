@@ -11,7 +11,8 @@ import 'fullcalendar/dist/locale/fr'
 import 'fullcalendar/dist/fullcalendar.css'
 
 import moment from 'vue-moment'
-import momentFR from 'moment/locale/fr'
+//import momentFR from 'moment/locale/fr'
+import momentIT from 'moment/locale/it'
 
 import VueCharts from 'vue-chartjs'
 
@@ -21,7 +22,7 @@ Vue.use(VueSocketio, 'http://144.254.51.227:15140')
 Vue.use(Vuetify)
 Vue.use(FullCalendar)
 Vue.use(moment, {
-  momentFR
+  momentIT
 })
 Vue.use(VueCharts)
 
