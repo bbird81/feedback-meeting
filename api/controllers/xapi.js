@@ -96,8 +96,8 @@ function updateCall (bodyCall, callback) {
 
 function registerEvents (xapi, id) {
   xapi.command('UserInterface Message Prompt Display', {
-    Title: 'Comment s\'est passée la réunion ?',
-    Text: 'Veuillez évaluer cet appel sur une échelle de 1 à 5',
+    Title: 'Valuta la riunione',
+    Text: 'Per favore valuta la riunione in una scala da 1 a 5',
     FeedbackId: 'callrating-' + id,
     'Option.1': '1',
     'Option.2': '2',
@@ -128,9 +128,9 @@ function registerEvents (xapi, id) {
           FeedbackId: 'feedbacks-' + id,
           InputType: 'SingleLine',
           KeyboardState: 'Open',
-          Placeholder: 'Ecrivez vos commentaires ici',
-          SubmitText: 'Envoyer',
-          Text: 'Vos commentaires sont très importants pour nous',
+          Placeholder: 'Aggiungi il tuo commento',
+          SubmitText: 'Invia',
+          Text: 'Il tuo commento è importante e verrà letto dallo staff',
           Title: 'Feedback'
         }).catch(function (error) {
           console.error(error)
@@ -147,8 +147,8 @@ function registerEvents (xapi, id) {
       }, function () {
         xapi.command('UserInterface Message Alert Display', {
           Duration: 3,
-          Text: 'Merci beaucoup pour ce feedback !',
-          Title: 'Merci'
+          Text: 'Grazie per averci lasciato un riscontro.',
+          Title: 'Grazie :-)'
         }).catch(function (error) {
           console.error(error)
         })
