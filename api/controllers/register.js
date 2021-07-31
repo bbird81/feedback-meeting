@@ -58,13 +58,13 @@ function register (codec, logger) {
 
       if (result) {
         if (result.Command.HttpFeedbackRegisterResult[0].$.status === 'OK') {
-          logger.info('Enregistrement réussi du codec ' + codec.systemName +
-            ' sur l\'URL suivante : ' + process.env.feedback_url + process.env.calldisconnect_url)
+          logger.info('Registrazione riuscita del codec ' + codec.systemName +
+            ' al seguente indirizzo: ' + process.env.feedback_url + process.env.calldisconnect_url)
           updateCodec(codec, false, null)
         } else {
-          logger.warn('L\'enregistrement du codec ' + codec.systemName +
-            ' a échoué ! Veuillez réessayer après avoir vérifié les erreurs !')
-          updateCodec(codec, true, 'Une erreur est survenue')
+          logger.warn('La registrazione del codec ' + codec.systemName +
+            ' è fallita! Riprova dopo aver verificato la presenza di errori.')
+          updateCodec(codec, true, 'C\'è stato un errore')
         }
       }
     })
