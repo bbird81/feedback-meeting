@@ -83,5 +83,36 @@ npm run build
 You might want to run it as a service (I do).
 
 Just install node-windows by typing:
-``` 
+```
 npm install -g node-windows
+```
+Then, in project root, run:
+```
+npm link node-windows
+```
+
+Then create a script like this and run it with node:
+```
+var Service = require('node-windows').Service;
+
+// Create a new service object
+var svc = new Service({
+  name:'Feedback Meeting Portal',
+  description: 'Web server that collects feedbacks from video endpoints',
+  script: 'C:\\feedback-meeting\\server.js',
+  nodeOptions: [
+    '--harmony',
+    '--max_old_space_size=4096'
+  ]
+  //, workingDirectory: '...'
+  //, allowServiceLogon: true
+});
+
+// Listen for the "install" event, which indicates the
+// process is available as a service.
+svc.on('install',function(){
+  svc.start();
+});
+
+svc.install();
+```
