@@ -7,7 +7,8 @@ import Vuetify from 'vuetify'
 import 'vuetify/dist/vuetify.min.css'
 
 import FullCalendar from 'vue-full-calendar'
-import 'fullcalendar/dist/locale/fr'
+import 'fullcalendar/dist/locale/it'
+//import 'fullcalendar/dist/locale/fr'
 import 'fullcalendar/dist/fullcalendar.css'
 
 import moment from 'vue-moment'
