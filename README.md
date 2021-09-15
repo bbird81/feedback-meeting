@@ -78,3 +78,10 @@ You can add as many codecs as you want.
 # build for production with minification
 npm run build
 ```
+
+### Run the project as a service
+You might want to run it as a service (I do).
+
+Just install node-windows by typing:
+``` 
+npm install -g node-windows
