@@ -301,7 +301,7 @@ export default {
       },
       validEdit: true,
       select: null,
-      stringRules: [v => !!v || "Veuillez renseigner une valeur"],
+      stringRules: [v => !!v || "Per favore inserisci un valore"],
       snackbar: false,
       y: "top",
       x: null,
@@ -323,7 +323,7 @@ export default {
         Api()
           .post("/codec", this.modelAdd)
           .then(response => {
-            this.text = "Codec ajouté !";
+            this.text = "Codec aggiunto!";
             this.snackbar = true;
             this.clear();
             this.$emit("refreshCodecs");
@@ -338,7 +338,7 @@ export default {
         Api()
           .put("/codec", this.modelEdit)
           .then(response => {
-            this.text = "Codec modifié !";
+            this.text = "Codec modificato!";
             this.snackbar = true;
             this.$emit("refreshCodecs");
           })
@@ -351,7 +351,7 @@ export default {
       Api()
         .delete("/codec/" + this.select._id)
         .then(response => {
-          this.text = "Codec supprimé !";
+          this.text = "Codec eliminato!";
           this.snackbar = true;
           this.$emit("refreshCodecs");
         })
